@@ -1,0 +1,92 @@
+.register-section {
+  width: 20vw;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.register-section h2 {
+  margin-bottom: 20px;
+  color: #4b6cb7;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.register-form label {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+.register-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.register-form button {
+  background-color: #4b6cb7;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-form button:hover {
+  background-color: #3a559f;
+}
+
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+.login-link a {
+  color: #4b6cb7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+
+  word-break: break-word;
+  white-space: normal;   
+  max-width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  box-sizing: border-box
+}
+
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}

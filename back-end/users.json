@@ -1,0 +1,62 @@
+[
+  {
+    "name": "qwa",
+    "email": "dgosan397@gmail.com",
+    "password": "123",
+    "images": []
+  },
+  {
+    "name": "qwe",
+    "email": "alice_2002@gmail.com",
+    "password": "123",
+    "images": [
+      "img_1748509769096.png",
+      "img_1748509774382.png",
+      "img_1748509777568.png",
+      "img_1748525926385.png",
+      "img_1748525929547.png"
+    ]
+  },
+  {
+    "name": "qws",
+    "email": "d@e",
+    "password": "123"
+  },
+  {
+    "name": "adss",
+    "email": "a@w",
+    "password": "123"
+  },
+  {
+    "name": "цук",
+    "email": "d@d",
+    "password": "123",
+    "images": []
+  },
+  {
+    "name": "asdf",
+    "email": "as@a",
+    "password": "123",
+    "images": []
+  },
+  {
+    "name": "asdfg",
+    "email": "asd@a",
+    "password": "123",
+    "images": []
+  },
+  {
+    "name": "wqeer",
+    "email": "ds@a",
+    "password": "123",
+    "images": []
+  },
+  {
+    "name": "qweasdasd",
+    "email": "a@asda",
+    "password": "123",
+    "images": [
+      "img_1748526041244.png"
+    ]
+  }
+]

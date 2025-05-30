@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Template from './Template';
+import LoginForm from './LoginForm';
+import RegisterForm from './RegisterForm';
+import Canvas from './Canvas';
+import Profile from './Profile';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userName, setUserName] = useState(null);
+
+  const handleLogin = (name) => {
+    setIsLoggedIn(true);
+    setUserName(name);
+  };
+
+  const handleRegister = (name) => {
+    setIsLoggedIn(true);
+    setUserName(name);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Template isLoggedIn={isLoggedIn} />}>
+          <Route 
+            index 
+            element={isLoggedIn ? <Navigate to="/canvas" /> : <LoginForm onLogin={handleLogin} />} 
+          />
+          <Route path="login" element={<LoginForm onLogin={handleLogin} />} />
+          <Route path="register" element={<RegisterForm onRegister={handleRegister} />} />
+          <Route 
+            path="canvas" 
+            element={isLoggedIn ? <Canvas userName={userName} /> : <Navigate to="/login" />} 
+          />
+          <Route 
+            path="profile" 
+            element={isLoggedIn ? <Profile userName={userName} /> : <Navigate to="/login" />} 
+          />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
